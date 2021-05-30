@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["contents.js"]
+      "js": ["main.js"]
     }
   ],
   "background": {
