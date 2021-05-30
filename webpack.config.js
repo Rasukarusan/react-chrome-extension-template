@@ -4,7 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    contents: './src/contents.tsx',
+    main: './src/main.tsx',
     background: './src/background.js',
   },
   output: {
@@ -28,7 +28,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: './public/manifest.json',
+          from: './manifest.json',
           to: 'manifest.json'
         },
       ]

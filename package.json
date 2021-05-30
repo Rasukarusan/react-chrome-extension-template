@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch"
+    "dev": "webpack --mode development --watch",
+    "clean": "rm dist/*"
   },
   "devDependencies": {
     "@types/react": "^17.0.8",
