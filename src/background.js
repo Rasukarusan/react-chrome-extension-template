@@ -1,1 +1,1 @@
-import hotreload from 'crx-hotreload';
+import hotreload from 'crx-hotreload'
