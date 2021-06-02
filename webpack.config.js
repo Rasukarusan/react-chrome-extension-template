@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -9,6 +9,9 @@ module.exports = {
   },
   output: {
     path: __dirname + '/dist',
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
   },
   module: {
     rules: [
@@ -20,18 +23,20 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new TerserPlugin({
-      extractComments: false, // LICENCE.txtを生成しない
-    })],
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false, // LICENCE.txtを生成しない
+      }),
+    ],
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
           from: './manifest.json',
-          to: 'manifest.json'
+          to: 'manifest.json',
         },
-      ]
+      ],
     }),
   ],
-};
+}
